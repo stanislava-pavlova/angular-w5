@@ -10,6 +10,10 @@ The Weather App is a simple web application built using Angular that allows user
 - Ability to search for weather by city name.
 - 5-day weather forecast for the searched city, including temperature, weather icon, and description for each day.
 
+## Images
+![image](https://github.com/stanislava-pavlova/angular-w5/assets/118082248/649375f1-a3e5-4403-90a4-484a0429218f)
+![image](https://github.com/stanislava-pavlova/angular-w5/assets/118082248/f9f25d42-9675-49cf-a0ce-e18a940cd384)
+
 ## Usage
 1. Run the application: `ng serve`
 2. Open your browser and go to `http://localhost:4200/`
@@ -22,11 +26,6 @@ The Weather App is a simple web application built using Angular that allows user
 - HTML
 - SCSS
 - OpenWeatherMap API
-
-## Images
-![image](https://github.com/stanislava-pavlova/angular-w5/assets/118082248/649375f1-a3e5-4403-90a4-484a0429218f)
-![image](https://github.com/stanislava-pavlova/angular-w5/assets/118082248/f9f25d42-9675-49cf-a0ce-e18a940cd384)
-
 
 ## Development server
 
