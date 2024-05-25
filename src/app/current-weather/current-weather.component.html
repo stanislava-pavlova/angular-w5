@@ -1,0 +1,29 @@
+<main class="flex">
+  <div class="card">
+    <div class="search flex">
+      <input
+        type="text"
+        class="search-bar"
+        id="searchBar"
+        [(ngModel)]="cityName"
+      />
+      <button id="searchBtn" (click)="search()">🔍</button>
+    </div>
+    <div class="weather">
+      <div class="town flex">
+        <h3 class="city">{{ weatherData?.name }}</h3>
+        <h2 class="temp">{{ weatherData?.main.temp.toFixed() }}°C</h2>
+      </div>
+      <img
+        src="https://openweathermap.org/img/wn/{{
+          weatherData?.weather[0].icon
+        }}.png"
+        alt=""
+        class="icon"
+      />
+      <p class="description">{{ weatherData?.weather[0].description }}</p>
+      <p class="humidity">Humidity: {{ weatherData?.main.humidity }}%</p>
+      <p class="wind">Wind speed: {{ weatherData?.wind.speed }} km/h</p>
+    </div>
+  </div>
+</main>
