@@ -1,7 +1,5 @@
 # WeatherApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
-
 ## Description
 The Weather App is a simple web application built using Angular that allows users to check the current weather and a 5-day forecast for any city around the world. The app utilizes the OpenWeatherMap API to fetch weather data including temperature, humidity, wind speed, and weather conditions.
 
@@ -26,6 +24,8 @@ The Weather App is a simple web application built using Angular that allows user
 - HTML
 - SCSS
 - OpenWeatherMap API
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.
 
 ## Development server
 
