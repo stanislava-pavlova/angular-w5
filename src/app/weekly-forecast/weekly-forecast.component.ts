@@ -1,9 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { Forecast, ForecastResponse } from './types';
+import { Forecast } from './types';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { environment } from '../../environments/environment';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-weekly-forecast',
@@ -16,7 +15,7 @@ export class WeeklyForecastComponent {
   cityName: string = 'Plovdiv';
   forecastData: Forecast[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private weatherService: WeatherService) {}
 
   ngOnInit(): void {
     this.fetchForecast(this.cityName);
@@ -27,15 +26,9 @@ export class WeeklyForecastComponent {
   }
 
   fetchForecast(city: string): void {
-    const apiKey = environment.apiKey;
-
-    this.http
-      .get<ForecastResponse>(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`
-      )
-      .subscribe(
-        (data) => (this.forecastData = data.list),
-        (error) => alert('No weather information found for your city')
-      );
+    this.weatherService.getWeeklyForecast(city).subscribe(
+      (data: any) => (this.forecastData = data.list),
+      (error) => alert('No weather information found for your city')
+    );
   }
 }
